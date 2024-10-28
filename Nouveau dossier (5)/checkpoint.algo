@@ -1,0 +1,22 @@
+ALGORITHM countcharacteres
+VAR
+    word:INTEGER;
+    voywel:INTEGER;
+    sentence:INTEGER;
+    str:STRING;
+    i:INTEGER;
+BEGIN
+read(str)
+    sentence:=str.length;
+    FOR i FROM 0 TO str.length-1 DO
+        IF (str[i]=" ") THEN
+           word:=word+1;
+        END_IF
+        IF (str[i]="a" or str[i]="e" or str[i]="i" or str[i]="u" or str[i]="e"or str[i]="y" ) THEN
+            voywel:=voywel+1;
+        END_IF
+    END_FOR
+    write(word)
+     write(voywel)
+      write(sentence)
+END

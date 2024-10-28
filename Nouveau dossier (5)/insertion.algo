@@ -1,0 +1,19 @@
+ALGORITHM insertionsort
+VAR
+tab : ARRAY_OF INTEGER[50];
+i,j,current,n,INTEGER
+n:=tab.length
+    set_declarations
+BEGIN
+for i FROM 1 to n-1 DO
+current:=tab[i];
+j:=i-1
+while (j>=0 AND tab[j]>current ) DO
+tab[j+1] :=tab{j};
+j:j-1;
+END_WHILE
+tab[j+1]:=current;
+END_FOR
+write{tab}
+
+    
